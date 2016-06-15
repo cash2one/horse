@@ -1,0 +1,113 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "PublicResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "PublicResource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SERVER_CONSOLE DIALOGEX 0, 0, 269, 249
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Console"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,256,195,ES_MULTILINE | WS_VSCROLL | 
+                    WS_HSCROLL
+    LTEXT           "Service Cycle:",IDC_STATIC,7,233,44,8
+    LTEXT           "Client Count:",IDC_STATIC,7,221,42,8
+    LTEXT           "",IDC_ST_CLIENT_COUNT,62,221,32,8
+    LTEXT           "",IDC_ST_CYCLE_TIME,62,233,32,8
+    LTEXT           "TCPRecv:",IDC_STATIC,98,221,31,8
+    LTEXT           "TCPSend:",IDC_STATIC,98,233,32,8
+    LTEXT           "",IDC_ST_TCP_SEND,134,233,32,8
+    LTEXT           "",IDC_ST_TCP_RECV,134,221,32,8
+    LTEXT           "UDPRecv:",IDC_STATIC,169,221,31,8
+    LTEXT           "UDPSend:",IDC_STATIC,169,233,32,8
+    LTEXT           "",IDC_ST_UDP_SEND,205,233,32,8
+    LTEXT           "",IDC_ST_UDP_RECV,205,221,32,8
+    EDITTEXT        IDC_EDIT_COMMAND,7,205,224,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Execute",IDC_EXEC_COMMAND,232,205,31,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SERVER_CONSOLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 241
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

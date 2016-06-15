@@ -1,0 +1,19 @@
+1.client连续发两次，收到数据有问题。
+  - 因为连续两次async_read有问题，试试async_read_some
+
+2.server不能连续发送async_write,改成同步的write或写到队列然后async_write，在回调中继续async_write
+
+3.作echo测试，没连接时CPU占用率很高；4K的包做测试
+  - while (1) ios.run 的问题
+
+4.退出处理
+
+5.strand
+
+6.发送4K的数据包，发送的少，接收的多，改异步？
+
+7.tcmalloc: 收数据线程收好后把数据post给主逻辑线程。为了少一次copy，用了shard_ptr<T>。然后为了减少new ,delete的消耗，给T加了个内存池，重载其new，delete。然后发现T有成员是std容器，它在处理其元素时没有用T的内存池，还得给这些容器加个自定义Allocator，在allocator里再加个内存池
+
+8.dump
+
+9.db

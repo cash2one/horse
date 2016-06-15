@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "horse", "horse\horse.vcxproj", "{1A44B436-6F81-46A8-85B5-0422B5F9AB9F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "horse_client", "horse_client\horse_client.vcxproj", "{AFF5FCC5-C1B9-49BB-9195-C11BC491E8AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Robot", "Robot\Robot.vcxproj", "{EBF157F2-352E-4BCC-9234-FE9A8303FE63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A44B436-6F81-46A8-85B5-0422B5F9AB9F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1A44B436-6F81-46A8-85B5-0422B5F9AB9F}.Debug|Win32.Build.0 = Debug|Win32
+		{1A44B436-6F81-46A8-85B5-0422B5F9AB9F}.Release|Win32.ActiveCfg = Release|Win32
+		{1A44B436-6F81-46A8-85B5-0422B5F9AB9F}.Release|Win32.Build.0 = Release|Win32
+		{AFF5FCC5-C1B9-49BB-9195-C11BC491E8AE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AFF5FCC5-C1B9-49BB-9195-C11BC491E8AE}.Debug|Win32.Build.0 = Debug|Win32
+		{AFF5FCC5-C1B9-49BB-9195-C11BC491E8AE}.Release|Win32.ActiveCfg = Release|Win32
+		{AFF5FCC5-C1B9-49BB-9195-C11BC491E8AE}.Release|Win32.Build.0 = Release|Win32
+		{EBF157F2-352E-4BCC-9234-FE9A8303FE63}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EBF157F2-352E-4BCC-9234-FE9A8303FE63}.Debug|Win32.Build.0 = Debug|Win32
+		{EBF157F2-352E-4BCC-9234-FE9A8303FE63}.Release|Win32.ActiveCfg = Release|Win32
+		{EBF157F2-352E-4BCC-9234-FE9A8303FE63}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

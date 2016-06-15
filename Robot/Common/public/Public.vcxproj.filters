@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="数据库定义">
+      <UniqueIdentifier>{e44bbb86-2fdc-40d7-a888-6ccc62586942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源">
+      <UniqueIdentifier>{44a50c03-d675-4a61-9ffb-8b11e71b8bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="服务器控制台">
+      <UniqueIdentifier>{0faac77a-8bc5-49ae-8c85-7d7c59ac42c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="服务器线程">
+      <UniqueIdentifier>{9f74812f-9fec-4c27-901d-89ba1711e715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库">
+      <UniqueIdentifier>{2c4907ba-4b8f-4918-bd49-0b184be6d539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库\接口">
+      <UniqueIdentifier>{71e81e42-e80a-4d74-a4c7-676e5056901e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库\MySQL实现">
+      <UniqueIdentifier>{4303dd96-06e6-402d-b885-33208235d528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库\MySQL">
+      <UniqueIdentifier>{1aa127f9-c1d2-4774-8775-a49ffc409db4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库\MySQL\头文件">
+      <UniqueIdentifier>{d059ee6b-068f-47b4-9524-f8c949074dd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库\MySQL\库">
+      <UniqueIdentifier>{84286c27-1c55-4b04-b9de-f3f884e3ef9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库\事务管理">
+      <UniqueIdentifier>{538a275f-1433-4d6a-8016-acc1974fd225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="基类">
+      <UniqueIdentifier>{53ab6bae-721f-47b8-ae5d-2c7b01fdeb6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DLL装载">
+      <UniqueIdentifier>{7454b9bc-3f38-4f2d-89c6-3e3b46b22dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="脚本系统">
+      <UniqueIdentifier>{a694e36d-7ab0-4de6-921d-91746a8df2ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议加密">
+      <UniqueIdentifier>{6fca7b46-e21a-442f-b6ad-8c88e2f8689d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD5计算">
+      <UniqueIdentifier>{6c07517f-5218-48fa-b336-e733436bef45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="服务器监控">
+      <UniqueIdentifier>{d1519dcd-aeb8-4ac2-bc2f-8d5087da2cdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="字符过滤">
+      <UniqueIdentifier>{d560a31c-d4cb-4c3e-95d7-e37bbcd0af4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpClient">
+      <UniqueIdentifier>{f57d4246-a137-4bc4-8bbc-d903664c2e01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Base64.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseTimer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DBErrHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DBEventEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DiffSizeMiniObjectsPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EasyThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SlkReader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlPanel.cpp">
+      <Filter>服务器控制台</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerConsoleDlg.cpp">
+      <Filter>服务器控制台</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerThread.cpp">
+      <Filter>服务器线程</Filter>
+    </ClCompile>
+    <ClCompile Include="DBInterfaces.cpp">
+      <Filter>数据库\接口</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLConnection.cpp">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLDatabase.cpp">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLRecordSet.cpp">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLValue.cpp">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClCompile>
+    <ClCompile Include="DBTansaction.cpp">
+      <Filter>数据库\事务管理</Filter>
+    </ClCompile>
+    <ClCompile Include="DBTransationManager.cpp">
+      <Filter>数据库\事务管理</Filter>
+    </ClCompile>
+    <ClCompile Include="DBTransationWorkThread.cpp">
+      <Filter>数据库\事务管理</Filter>
+    </ClCompile>
+    <ClCompile Include="NameObject.cpp">
+      <Filter>基类</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadDll.cpp">
+      <Filter>DLL装载</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionCaculator.cpp">
+      <Filter>脚本系统</Filter>
+    </ClCompile>
+    <ClCompile Include="arc4.cpp">
+      <Filter>协议加密</Filter>
+    </ClCompile>
+    <ClCompile Include="FileEncrypt.cpp">
+      <Filter>协议加密</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpEncryption.cpp">
+      <Filter>协议加密</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>MD5计算</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorPipe.cpp">
+      <Filter>服务器监控</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyWordFiltrateThread.cpp">
+      <Filter>字符过滤</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpClient.cpp">
+      <Filter>HttpClient</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpRequest.cpp">
+      <Filter>HttpClient</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoLock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTimer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DBErrHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DBEventEx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DiffSizeMiniObjectsPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyCriticalSection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EasyTimer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IDStorage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IPAddress.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NameStorage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Public.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SlkReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StringSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadSafeIDStorage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadSafeList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xPacket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PublicResource.h">
+      <Filter>资源</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlPanel.h">
+      <Filter>服务器控制台</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerConsoleDlg.h">
+      <Filter>服务器控制台</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerThread.h">
+      <Filter>服务器线程</Filter>
+    </ClInclude>
+    <ClInclude Include="DBInterfaces.h">
+      <Filter>数据库\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="DBTypes.h">
+      <Filter>数据库\接口</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLConnection.h">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLDatabase.h">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLRecordSet.h">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLValue.h">
+      <Filter>数据库\MySQL实现</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\config-netware.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\config-os2.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\config-win.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\errmsg.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\m_ctype.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\m_string.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\my_alloc.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\my_dbug.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\my_getopt.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\my_global.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\my_list.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\my_pthread.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\my_sys.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\mysql.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\mysql_com.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\mysql_embed.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\mysql_time.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\mysql_version.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\mysqld_ername.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\mysqld_error.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\raid.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQL\include\typelib.h">
+      <Filter>数据库\MySQL\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DBTansaction.h">
+      <Filter>数据库\事务管理</Filter>
+    </ClInclude>
+    <ClInclude Include="DBTransationManager.h">
+      <Filter>数据库\事务管理</Filter>
+    </ClInclude>
+    <ClInclude Include="DBTransationWorkThread.h">
+      <Filter>数据库\事务管理</Filter>
+    </ClInclude>
+    <ClInclude Include="NameObject.h">
+      <Filter>基类</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadDll.h">
+      <Filter>DLL装载</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpressionCaculator.h">
+      <Filter>脚本系统</Filter>
+    </ClInclude>
+    <ClInclude Include="arc4.h">
+      <Filter>协议加密</Filter>
+    </ClInclude>
+    <ClInclude Include="FileEncrypt.h">
+      <Filter>协议加密</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpEncryption.h">
+      <Filter>协议加密</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>MD5计算</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorPipe.h">
+      <Filter>服务器监控</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyWordFiltrateThread.h">
+      <Filter>字符过滤</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpClient.h">
+      <Filter>HttpClient</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpRequest.h">
+      <Filter>HttpClient</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Public.rc">
+      <Filter>资源</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="MySQL\lib\opt\libmysql.lib">
+      <Filter>数据库\MySQL\库</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="MySQL\lib\opt\mysqlclient.lib">
+      <Filter>数据库\MySQL\库</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="MySQL\lib\opt\mysys-nt.lib">
+      <Filter>数据库\MySQL\库</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="MySQL\lib\opt\regex.lib">
+      <Filter>数据库\MySQL\库</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="MySQL\lib\opt\strings.lib">
+      <Filter>数据库\MySQL\库</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="MySQL\lib\opt\zlib.lib">
+      <Filter>数据库\MySQL\库</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

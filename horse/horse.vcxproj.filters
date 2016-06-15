@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="server">
+      <UniqueIdentifier>{98ec1d96-8fcc-493e-a43c-3ed790594df8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{12d9f276-c9a5-480c-a8c8-c7b1ab28e242}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameClient.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameServer.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="database\AdhocStatement.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\DatabaseWorker.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\Field.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\MySQLConnection.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\PreparedStatement.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\QueryHolder.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\QueryResult.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\Transaction.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\Util.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDB.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\TestDatabase.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDB.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="server.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="message.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="horse.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClient.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="client.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="time_wheel.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServer.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="client_mngr.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="memory_pool.hpp">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="database\AdhocStatement.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\DatabaseEnv.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\DatabaseWorker.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\DatabaseWorkerPool.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\Field.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\MySQLConnection.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\MySQLThreading.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\PreparedStatement.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\QueryHolder.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\QueryResult.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\SQLOperation.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\Transaction.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\Util.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\Timer.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="database\TestDatabase.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDB.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1A44B436-6F81-46A8-85B5-0422B5F9AB9F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>horse</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;..\mysql\include;.\shared</AdditionalIncludeDirectories>
+      <AdditionalOptions>-D_WIN32_WINNT=0x0501 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>../mysql/lib/libmysql.lib; kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0</AdditionalIncludeDirectories>
+      <AdditionalOptions>-D_WIN32_WINNT=0x0501 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GameDB.cpp" />
+    <ClCompile Include="database\AdhocStatement.cpp" />
+    <ClCompile Include="database\DatabaseWorker.cpp" />
+    <ClCompile Include="database\Field.cpp" />
+    <ClCompile Include="database\TestDatabase.cpp" />
+    <ClCompile Include="database\MySQLConnection.cpp" />
+    <ClCompile Include="database\PreparedStatement.cpp" />
+    <ClCompile Include="database\QueryHolder.cpp" />
+    <ClCompile Include="database\QueryResult.cpp" />
+    <ClCompile Include="database\Transaction.cpp" />
+    <ClCompile Include="database\Util.cpp" />
+    <ClCompile Include="GameClient.cpp" />
+    <ClCompile Include="GameServer.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TestDB.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="client_mngr.hpp" />
+    <ClInclude Include="GameDB.h" />
+    <ClInclude Include="database\AdhocStatement.h" />
+    <ClInclude Include="database\DatabaseEnv.h" />
+    <ClInclude Include="database\DatabaseWorker.h" />
+    <ClInclude Include="database\DatabaseWorkerPool.h" />
+    <ClInclude Include="database\Field.h" />
+    <ClInclude Include="database\TestDatabase.h" />
+    <ClInclude Include="database\MySQLConnection.h" />
+    <ClInclude Include="database\MySQLThreading.h" />
+    <ClInclude Include="database\PreparedStatement.h" />
+    <ClInclude Include="database\QueryHolder.h" />
+    <ClInclude Include="database\QueryResult.h" />
+    <ClInclude Include="database\SQLOperation.h" />
+    <ClInclude Include="database\Timer.h" />
+    <ClInclude Include="database\Transaction.h" />
+    <ClInclude Include="database\Util.h" />
+    <ClInclude Include="GameClient.h" />
+    <ClInclude Include="horse.hpp" />
+    <ClInclude Include="client.hpp" />
+    <ClInclude Include="GameServer.h" />
+    <ClInclude Include="memory_pool.hpp" />
+    <ClInclude Include="message.hpp" />
+    <ClInclude Include="server.hpp" />
+    <ClInclude Include="timer.hpp" />
+    <ClInclude Include="time_wheel.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
