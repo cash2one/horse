@@ -53,7 +53,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>d:\boost_1_55_0;..\mysql\include;.\shared</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>e:\boost_1_55_0;..\mysql\include;.\shared</AdditionalIncludeDirectories>
       <AdditionalOptions>-D_WIN32_WINNT=0x0501 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>

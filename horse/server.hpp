@@ -32,25 +32,23 @@ namespace horse
 	template<class T,int AutoKick = 0>
 	class server
 	{
-		io_service							server_ios_;
-		io_service							client_ios_;
-		io_service							main_ios_;		//main io service
+		io_service							netio_;
+		io_service							serverio_;
 		shared_ptr<io_service::work>		work_;			
 		thread_group						threads_;		//async network thread pool
 		tcp::acceptor						acceptor_;
 		bool								exit_;
 		short								threadnum_;
 		shared_ptr<time_wheel<T> >			tw_;
-		//timer								timer_;
 		signal_set							signals_;
 
 	public:
 		typedef shared_ptr<T>				client_ptr;
 
 		explicit server(const tcp::endpoint& ep,short threadnum)
-		:	acceptor_(client_ios_),exit_(false),threadnum_(threadnum),
+		:	acceptor_(netio_),exit_(false),threadnum_(threadnum),
 			//timer_(main_ios_,0,10,bind(&server::run,this)),
-			signals_(main_ios_)
+			signals_(serverio_)
 		{
 			signals_.add(SIGINT);
 			signals_.add(SIGTERM);
@@ -65,20 +63,21 @@ namespace horse
 
 			start_accept();
 
-			if(AutoKick > 0) tw_.reset(new time_wheel<T>(main_ios_,AutoKick));
+			if(AutoKick > 0) 
+                tw_.reset(new time_wheel<T>(serverio_,AutoKick));
 		}
 
 		/// test of the memory pool performance
 		void test0()
 		{
 			std::vector<client_ptr> v;
-			socket_ptr sock(make_shared<tcp::socket>(client_ios_));
+			socket_ptr sock(make_shared<tcp::socket>(netio_));
 
 			{
 				progress_timer t;
 				for(int i = 0; i < 10000; ++i)
 				{
-					v.push_back(shared_ptr<T>(new T(sock,main_ios_)));
+					v.push_back(shared_ptr<T>(new T(sock,serverio_)));
 					//v.push_back(shared_ptr<T>(make_shared<T>(sock,main_ios_)));
 					//v.push_back(shared_ptr<T>(T::make_client(sock,main_ios_)));
 				}
@@ -104,13 +103,13 @@ namespace horse
 		void stop()
 		{
 			exit_ = true;
-			client_ios_.stop();
-			main_ios_.stop();
+			netio_.stop();
+			serverio_.stop();
 		}
 
 		boost::asio::io_service& main_service()
 		{
-			return main_ios_;
+			return serverio_;
 		}
 
 	protected:
@@ -125,7 +124,7 @@ namespace horse
 			{
 				std::size_t ret = 0;
 				int count = 10;
-				while(count--) ret += main_ios_.poll_one();
+				while(count--) ret += serverio_.poll_one();
 					//ret = main_ios_.run();
 
 				/// another way to run logic things is here
@@ -138,21 +137,22 @@ namespace horse
 		{
 			while(!exit_)
 			{
-				client_ios_.run_one();
+				netio_.run_one();
 			}
 		}
 		
 		void start_accept()
 		{
 // 			std::cout<<this_thread::get_id()<<std::endl;
-			socket_ptr new_socket(make_shared<tcp::socket>(client_ios_));
+			socket_ptr new_socket(make_shared<tcp::socket>(netio_));
 			acceptor_.async_accept( *new_socket,
 				bind(&server::post_accept, this, new_socket, placeholders::error));
 		}
 
 		void post_accept(socket_ptr sock,const system::error_code& error)
 		{
-			main_ios_.post(boost::bind(&server::handle_accept, this, sock,error));
+            start_accept();
+			serverio_.post(boost::bind(&server::handle_accept, this, sock,error));
 		}
 
 		void handle_accept(socket_ptr sock,const system::error_code& error)
@@ -161,7 +161,7 @@ namespace horse
 			{
 // 				thread::id id = this_thread::get_id();
 // 				std::cout<<"on accept:"<<this_thread::get_id()<<std::endl;
-				client_ptr new_(new T(sock,main_ios_));
+				client_ptr new_(new T(sock,serverio_));
 				new_->on_connect();
 
 				if(tw_)
@@ -169,9 +169,9 @@ namespace horse
 					tw_->on_join(new_);
 				}
 				new_->start();
-				start_accept();
-
-			}else
+// 				start_accept();
+			}
+            else
 			{
 				using namespace std;
 				cerr<<"handle_accept fail:"<<error.message()<<endl;

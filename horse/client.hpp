@@ -152,7 +152,8 @@ namespace horse
 					post_packet();
 					start();
 				}
-			}else
+			}
+            else
 			{
 // 				std::cerr<<"handle_read_head error"<<std::endl;
 				post_fail();
@@ -167,7 +168,8 @@ namespace horse
 				post_packet();
 				start();
 
-			}else
+			}
+            else
 			{
 // 				std::cerr<<"handle_read_head error"<<std::endl;
 				post_fail();
@@ -179,7 +181,8 @@ namespace horse
 			if(!error)
 			{
 				// std::cout<<"handle_write_msg success"<<std::endl;
-			}else
+			}
+            else
 			{
 // 				std::cerr<<"handle_write_msg error"<<std::endl;
 				post_fail();
