@@ -94,9 +94,9 @@ namespace horse
 //   		work_.reset(new io_service::work(main_ios_));
 			for (short i = 0; i < threadnum_; ++i)
 			{
-				threads_.create_thread(bind(&server::async_run, this));
+				threads_.create_thread(bind(&server::netio, this));
 			}
-			threads_.create_thread(bind(&server::main_run,this));
+			threads_.create_thread(bind(&server::main, this));
 			threads_.join_all();
 		}
 
@@ -118,9 +118,9 @@ namespace horse
 			client_mngr<T>::instance().run();
 		}
 
-		void main_run()
+		void main()
 		{
-			while(!exit_)
+			while (!exit_)
 			{
 				std::size_t ret = 0;
 				int count = 10;
@@ -133,7 +133,7 @@ namespace horse
 			}
 		}
 
-		void async_run()
+		void netio()
 		{
 			while(!exit_)
 			{

@@ -147,7 +147,8 @@ namespace horse
 					body_->resize(body_len);
 					asio::async_read( *socket_, buffer( &(*body_)[0], body_len ),
 						bind( &client::handle_read_body, shared_from_this(),placeholders::error));
-				}else
+				}
+                else
 				{
 					post_packet();
 					start();
@@ -201,7 +202,7 @@ namespace horse
 
 		void send_message(uint16_t cmd,uint16_t code,int32_t reserved,char* data = NULL,int len = 0)
 		{
-			if(disconnected_)
+			if (disconnected_)
 				return;
 
 			horse_msg_head head (sizeof(horse_msg_head), cmd, code, reserved);
@@ -229,6 +230,7 @@ namespace horse
 			// 		{
 			// 			std::cout<<"send succcess!"<<std::endl;
 			// 		}
+
 			//////////////////////////////////////////////////////////////////////////////////////////
 			/// sync send mode
 			// 		shared_ptr< std::string > pstr = make_shared<std::string>();
@@ -236,7 +238,7 @@ namespace horse
 			msg.append((char*)&head,sizeof(head));
 			if(data != NULL) msg.append(data,len);
 
-			// 		asio::async_write( *socket_,
+			//asio::async_write( *socket_,
 			// 			buffer(msg.data(), msg.length()),
 			// 			bind(&client::handle_write_msg, shared_from_this(), placeholders::error));
 			system::error_code e;
@@ -247,7 +249,8 @@ namespace horse
 		bool on_message(msg_head_ptr head, msg_body_ptr body)
 		{
 			std::cout<<"on message:"<<this_thread::get_id()<<std::endl;
-			if(wheel_ptr_ != NULL) wheel_ptr_->on_active(weak_entry_,session_);
+			if(wheel_ptr_ != NULL) 
+                wheel_ptr_->on_active(weak_entry_,session_);
 
 			if(head->cmd == horse::horse_msg_system_echo)
 			{
